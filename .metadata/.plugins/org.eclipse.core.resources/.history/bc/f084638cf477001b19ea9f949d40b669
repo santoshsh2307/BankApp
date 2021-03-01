@@ -1,0 +1,5 @@
+package com.RDP.school.controller;
+
+public class LoginController {
+
+}

@@ -1,0 +1,140 @@
+package com.quest.demo.entity;
+
+public class AcctDetail {
+	private Long id;
+	private String accName;
+	private String branch;
+	private String accNo;
+	private String ifscCode;
+	private String phone;
+	private Long accTypeId;
+	private String ceatedDate;
+	private Long statusId;
+	private Float ammount;
+	
+	
+	public AcctDetail() {
+		super();
+	}
+
+
+	public AcctDetail(Long id, String accName, String branch, String accNo, String ifscCode, String phone,
+			Long accTypeId, String ceatedDate, Long statusId, Float ammount) {
+		super();
+		this.id = id;
+		this.accName = accName;
+		this.branch = branch;
+		this.accNo = accNo;
+		this.ifscCode = ifscCode;
+		this.phone = phone;
+		this.accTypeId = accTypeId;
+		this.ceatedDate = ceatedDate;
+		this.statusId = statusId;
+		this.ammount = ammount;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getAccName() {
+		return accName;
+	}
+
+
+	public void setAccName(String accName) {
+		this.accName = accName;
+	}
+
+
+	public String getBranch() {
+		return branch;
+	}
+
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+
+	public String getAccNo() {
+		return accNo;
+	}
+
+
+	public void setAccNo(String accNo) {
+		this.accNo = accNo;
+	}
+
+
+	public String getIfscCode() {
+		return ifscCode;
+	}
+
+
+	public void setIfscCode(String ifscCode) {
+		this.ifscCode = ifscCode;
+	}
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+
+	public Long getAccTypeId() {
+		return accTypeId;
+	}
+
+
+	public void setAccTypeId(Long accTypeId) {
+		this.accTypeId = accTypeId;
+	}
+
+
+	public String getCeatedDate() {
+		return ceatedDate;
+	}
+
+
+	public void setCeatedDate(String ceatedDate) {
+		this.ceatedDate = ceatedDate;
+	}
+
+
+	public Long getStatusId() {
+		return statusId;
+	}
+
+
+	public void setStatusId(Long statusId) {
+		this.statusId = statusId;
+	}
+
+
+	public Float getAmmount() {
+		return ammount;
+	}
+
+
+	public void setAmmount(Float ammount) {
+		this.ammount = ammount;
+	}
+	
+	
+	
+	
+
+}

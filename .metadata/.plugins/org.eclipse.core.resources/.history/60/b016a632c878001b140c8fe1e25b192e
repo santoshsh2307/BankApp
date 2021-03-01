@@ -1,0 +1,5 @@
+package com.quest.demo.repositry;
+
+public interface BankTranjectionrepositry {
+
+}

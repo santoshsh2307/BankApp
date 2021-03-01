@@ -1,0 +1,16 @@
+package com.RDP.school.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.RDP.school.entity.days;
+
+@RestController
+public class DaysController {
+
+	
+	public String saveDays(@RequestBody days day) {
+		return "success";
+		
+	}
+}

@@ -1,0 +1,49 @@
+package com.quest.demo.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account_details")
+public class AccType {
+	private Long id;
+	
+	private String AccType;
+
+	public AccType() {
+		super();
+	}
+
+	public AccType(Long id, String accType) {
+		super();
+		this.id = id;
+		AccType = accType;
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	@Column(name = "acc_name")
+	public String getAccType() {
+		return AccType;
+	}
+
+	public void setAccType(String accType) {
+		AccType = accType;
+	}
+	
+	
+	
+
+}

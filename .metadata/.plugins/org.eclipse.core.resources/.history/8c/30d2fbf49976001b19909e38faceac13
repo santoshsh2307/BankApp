@@ -1,0 +1,5 @@
+package com.RDP.school.entity;
+
+public class Time {
+
+}

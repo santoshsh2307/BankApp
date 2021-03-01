@@ -1,0 +1,43 @@
+package com.RDP.school.controller;
+
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.RDP.school.entity.login;
+import com.RDP.school.repositry.LoginRepositry;
+
+@RestController
+public class LoginController<Login, Logins, logins> {
+
+	@Autowired
+	LoginRepositry loginrepo;
+	
+	@RequestMapping(value = "/saveLogin" , method = RequestMethod.GET)
+	public String saveLogin(@RequestBody login l) {
+		loginrepo.save(l);
+		return "test";
+		
+	}
+	@RequestMapping(value = "/getlogin", method = RequestMethod.GET)
+	public List<login> getlogin() {
+		
+	List<login> l = loginrepo.findAll();
+	return l;
+					
+	}
+	
+	@RequestMapping (value = "/getLoginsById", method = RequestMethod.GET )
+	public Login getLoginsById (Long Id) {
+		Optional login =  loginrepo.findById(Id);
+	Login lon =	(Login) login.get();
+		return  lon;
+		
+		
+	}
+	
+}

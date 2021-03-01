@@ -1,0 +1,90 @@
+package com.quest.demo.entity;
+
+public class BankTranjection {
+	private Long id;
+	private Long fromAccId;
+	private Long tranjTypeId;
+	private Long toAccId;
+	private Float Ammount;
+	private String createdDate;
+	
+	
+	public BankTranjection() {
+		super();
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Long getFromAccId() {
+		return fromAccId;
+	}
+
+
+	public void setFromAccId(Long fromAccId) {
+		this.fromAccId = fromAccId;
+	}
+
+
+	public Long getTranjTypeId() {
+		return tranjTypeId;
+	}
+
+
+	public void setTranjTypeId(Long tranjTypeId) {
+		this.tranjTypeId = tranjTypeId;
+	}
+
+
+	public Long getToAccId() {
+		return toAccId;
+	}
+
+
+	public void setToAccId(Long toAccId) {
+		this.toAccId = toAccId;
+	}
+
+
+	public Float getAmmount() {
+		return Ammount;
+	}
+
+
+	public void setAmmount(Float ammount) {
+		Ammount = ammount;
+	}
+
+
+	public String getCreatedDate() {
+		return createdDate;
+	}
+
+
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
+
+
+	public BankTranjection(Long id, Long fromAccId, Long tranjTypeId, Long toAccId, Float ammount, String createdDate) {
+		super();
+		this.id = id;
+		this.fromAccId = fromAccId;
+		this.tranjTypeId = tranjTypeId;
+		this.toAccId = toAccId;
+		Ammount = ammount;
+		this.createdDate = createdDate;
+	}
+	
+	
+	
+
+}

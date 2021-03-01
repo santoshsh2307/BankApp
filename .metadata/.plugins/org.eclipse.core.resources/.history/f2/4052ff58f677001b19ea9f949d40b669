@@ -1,0 +1,5 @@
+package com.RDP.school.repositry;
+
+public interface LoginRepositry {
+
+}

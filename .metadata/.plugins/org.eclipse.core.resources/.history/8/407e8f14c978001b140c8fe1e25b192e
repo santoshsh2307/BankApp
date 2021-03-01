@@ -1,0 +1,16 @@
+package com.quest.demo.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BankTranjectionController {
+	
+	
+	
+	public String saveBankTranjection(@RequestBody BankTranjection bt) {
+		return "sava Bank tranjection details";
+		
+	}
+
+}
