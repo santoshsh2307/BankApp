@@ -1,5 +1,0 @@
-package com.RDP.school.repositry;
-
-public interface TimeRepositry {
-
-}

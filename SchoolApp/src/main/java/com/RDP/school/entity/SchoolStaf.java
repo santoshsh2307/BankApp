@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class SchoolStaf {
 	
 	private Long id;
-	private String UserIdName;
+	private String userIdName;
 	private String pass;
 	private Long roleId;
 	
@@ -25,7 +25,7 @@ public class SchoolStaf {
 	public SchoolStaf(Long id, String userIdName, String pass, Long roleId) {
 		super();
 		this.id = id;
-		UserIdName = userIdName;
+		this.userIdName = userIdName;
 		this.pass = pass;
 		this.roleId = roleId;
 	}
@@ -44,12 +44,12 @@ public class SchoolStaf {
 
 	 @Column(name = "username")
 	public String getUserIdName() {
-		return UserIdName;
+		return userIdName;
 	}
 
 
 	public void setUserIdName(String userIdName) {
-		UserIdName = userIdName;
+		this.userIdName = userIdName;
 	}
 
 	@Column(name = "pass")

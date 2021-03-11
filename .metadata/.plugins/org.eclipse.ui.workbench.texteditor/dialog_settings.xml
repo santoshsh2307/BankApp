@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Ammount"/>
+		<item key="selection" value="status"/>
 		<list key="findhistory">
+			<item value="Status"/>
+			<item value="status"/>
+			<item value="custumerId"/>
 			<item value="ammount"/>
 			<item value="statusName"/>
 			<item value="stafId"/>
 			<item value="StafId"/>
-			<item value="status"/>
-			<item value="Status"/>
 			<item value="userid"/>
-			<item value="roleId"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

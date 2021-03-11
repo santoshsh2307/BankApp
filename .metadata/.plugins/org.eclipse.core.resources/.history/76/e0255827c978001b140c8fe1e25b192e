@@ -1,7 +1,0 @@
-package com.quest.demo.repositry;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface BankTranjectionrepositry extends JpaRepository<BankTranjection, Long> {
-
-}

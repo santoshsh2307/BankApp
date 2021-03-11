@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.RDP.school.entity.SchoolStaf;
+import com.RDP.school.entity.login;
 import com.RDP.school.repositry.StafRepository;
 
 @RestController
@@ -34,6 +35,16 @@ public class StaffController {
 	Optional<SchoolStaf> ss = stafRepo.findById(id);
 	SchoolStaf ssdata = ss.get();
 		return  ssdata;
+	}
+	
+	@RequestMapping (value = "/getLoginByusernameAndPass", method = RequestMethod.GET )
+	public SchoolStaf getLoginByusernameAndPass (String username , String password) {
+	Optional<SchoolStaf> login = stafRepo.findByUserIdNameAndPass(username,password);
+	if(login.isPresent()) {
+		SchoolStaf lon = login.get();
+		return  lon;
+	}
+	return null;
 	}
 
 }

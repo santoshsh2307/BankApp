@@ -1,7 +1,0 @@
-package com.RDP.school.entity;
-
-public class Roles {
-	private Long id;
-	private 
-
-}
