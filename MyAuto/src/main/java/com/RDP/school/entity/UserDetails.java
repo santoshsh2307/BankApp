@@ -17,7 +17,10 @@ private String name;
 private String password;
 private Long roleId;
 private String phone;
-
+private Long genderId;
+private String profilePhoto;
+private String email;
+private String address;
 
 public UserDetails() {
 	super();
@@ -83,6 +86,46 @@ public String getPhone() {
 
 public void setPhone(String phone) {
 	this.phone = phone;
+}
+
+@Column(name = "gender_id")
+public Long getGenderId() {
+	return genderId;
+}
+
+
+public void setGenderId(Long genderId) {
+	this.genderId = genderId;
+}
+
+@Column(name = "profile_photo")
+public String getProfilePhoto() {
+	return profilePhoto;
+}
+
+
+public void setProfilePhoto(String profilePhoto) {
+	this.profilePhoto = profilePhoto;
+}
+
+@Column(name = "email")
+public String getEmail() {
+	return email;
+}
+
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
+@Column(name = "address")
+public String getAddress() {
+	return address;
+}
+
+
+public void setAddress(String address) {
+	this.address = address;
 }	
 	
 	

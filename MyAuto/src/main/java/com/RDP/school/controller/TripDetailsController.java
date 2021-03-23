@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.RDP.school.Objects.TripDetailsDTO;
 import com.RDP.school.entity.Status;
 import com.RDP.school.entity.TripDetails;
 import com.RDP.school.entity.UserDetails;
@@ -23,13 +24,12 @@ public class TripDetailsController {
 	@Autowired
 	TripRepositry trrepo;
 	
-	
-
 	@RequestMapping(value = "/saveTrip", method = RequestMethod.POST)
 	public String saveTrip(@RequestBody TripDetails td) {
 		trrepo.save(td);
 		return "success"; 
 	}
+	
 	@RequestMapping(value = "/getAllTrips", method = RequestMethod.GET)
 	public List<TripDetails> getAllTrips() {
 		List<TripDetails> tripData = trrepo.findAll();
@@ -49,6 +49,7 @@ public class TripDetailsController {
 		}
 		return null;
 	}
+	
 	@RequestMapping(value = "/getStatusId", method = RequestMethod.GET)
 	public List<TripDetails> getStatusId (Long statusid) {
 		  List <TripDetails> data = trrepo.findByStatus(statusid);
@@ -58,5 +59,22 @@ public class TripDetailsController {
 		return null;
 	}
 	
+	@RequestMapping(value = "/getTripsDetailsForDriver", method = RequestMethod.GET)
+	public TripDetailsDTO getTripsDetailsForDriver(Long driverId) {
+		  Optional<TripDetailsDTO> data = trrepo.getTripsDetailsForDriver(driverId);
+		if (data.isPresent()) {
+			return data.get();
+		}
+		return null;
+	}
 	
+	@RequestMapping(value = "/getTripsDetailsForCustomer", method = RequestMethod.GET)
+	public TripDetailsDTO getTripsDetailsForCustomer(Long customerId) {
+		  Optional<TripDetailsDTO> data = trrepo.getTripsDetailsForCustomer(customerId);
+		if (data.isPresent()) {
+			return data.get();
+		}
+		return null;
+	}
 }
+

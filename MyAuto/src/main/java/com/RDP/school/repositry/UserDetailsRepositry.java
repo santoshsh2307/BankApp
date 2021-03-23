@@ -16,5 +16,7 @@ public interface UserDetailsRepositry extends JpaRepository<UserDetails, Long> {
 
 	Optional<UserDetails> findByName(String name);
 
+	Optional<UserDetails> findByPhoneAndPassword(String phone, String pwsd);
+
 
 }

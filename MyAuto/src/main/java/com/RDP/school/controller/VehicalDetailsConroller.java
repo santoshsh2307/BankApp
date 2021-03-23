@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.RDP.school.DTO.DriverDTO;
+import com.RDP.school.DTO.DriverDTO1;
 import com.RDP.school.entity.VehicalDetails;
 import com.RDP.school.repositry.VehicalDetailsRepositry;
 
@@ -43,7 +45,6 @@ public class VehicalDetailsConroller {
 		return null;
 	}
 	
-	
 	@RequestMapping(value = "/getVehicalsDetailsautoNumber", method = RequestMethod.GET)
 	public VehicalDetails  getVehicalsDetailsautoNumber(String autoNomber){
 		Optional<VehicalDetails> data =vdrrepo.findByAutoNumber(autoNomber);
@@ -61,6 +62,16 @@ public class VehicalDetailsConroller {
 		}
 		return null;
 	
+	}
+	
+	
+	@RequestMapping(value = "/getDriverDetailsByAutoNumber", method = RequestMethod.GET)
+	public DriverDTO1  getDriverDetailsByAutoNumber(String autoNumber){
+		DriverDTO1 data = vdrrepo.getDriverDetailsByAutoNumber(autoNumber);
+		if (data!=null) {
+			return data;
+		}
+		return null;
 	}
 	
 }

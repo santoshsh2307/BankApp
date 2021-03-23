@@ -22,14 +22,15 @@ public class TripDetails {
 	private Double toLongitude;
 	private String date;
 	private Long status;
-	
+	private Float distance;
+	private Float ammount;
 	
 	public TripDetails() {
 		super();
 	}
 
 	public TripDetails(Long id, Long custumerId, Long ownerId, String time, Double fromLatitude,
-			Double fromLongitude, Double toLatitude, Double toLongitude, String date, Long status) {
+			Double fromLongitude, Double toLatitude, Double toLongitude, String date, Long status, Float distance, Float ammount) {
 		super();
 		this.id = id;
 		this.custumerId = custumerId;
@@ -41,6 +42,8 @@ public class TripDetails {
 		this.toLongitude = toLongitude;
 		this.date = date;
 		this.status= status;
+		this.distance= distance;
+		this.ammount=ammount;
 	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -124,6 +127,22 @@ public class TripDetails {
 
 	public void setStatus(Long status) {
 		this.status = status;
+	}
+	@Column(name = "distance")
+	public Float getDistance() {
+		return distance;
+	}
+
+	public void setDistance(Float distance) {
+		this.distance = distance;
+	}
+	@Column(name = "ammount")
+	public Float getAmmount() {
+		return ammount;
+	}
+
+	public void setAmmount(Float ammount) {
+		this.ammount = ammount;
 	}
 	
 	
